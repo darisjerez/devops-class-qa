@@ -1,0 +1,9 @@
+trigger:
+- Gabriel
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: echo "El pipeline de Gabriel ha clonado el repositorio y está listo para la tarea."
+  displayName: 'Mensaje de Confirmación'
