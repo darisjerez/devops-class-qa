@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clonar repositorio') {
             steps {
-                git branch: 'nombre-del-branch', url: 'https://github.com/tu-usuario/tu-repo-qa.git'
+                git branch: 'Gabriel', url: 'https://github.com/darisjerez/devops-class-qa.git'
             }
         }
         stage('Instalar dependencias') {
