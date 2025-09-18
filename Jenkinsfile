@@ -17,12 +17,18 @@ pipeline {
                 bat 'npm test'
             }
         }
+        stage('Verificar reportes') {
+            steps {
+                bat 'dir reports'
+            }
+        }
         stage('Construir app') {
             steps {
                 bat 'npm run build'
             }
         }
     }
+
     post {
         always {
             junit 'reports/**/*.xml'
