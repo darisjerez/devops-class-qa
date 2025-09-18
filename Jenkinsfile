@@ -1,6 +1,5 @@
 pipeline {
     agent any
-
     stages {
         stage('Clonar repositorio') {
             steps {
@@ -15,6 +14,11 @@ pipeline {
         stage('Ejecutar pruebas') {
             steps {
                 bat 'npm test'
+            }
+        }
+        stage('Crear carpeta reports si no existe') {
+            steps {
+                bat 'if not exist reports mkdir reports'
             }
         }
         stage('Verificar reportes') {
